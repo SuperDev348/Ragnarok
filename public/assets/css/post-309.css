@@ -1,0 +1,64 @@
+.elementor-309
+  .elementor-element.elementor-element-0bc9b65:not(.elementor-motion-effects-element-type-background),
+.elementor-309
+  .elementor-element.elementor-element-0bc9b65
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-color: #12112e99;
+}
+.elementor-309 .elementor-element.elementor-element-0bc9b65 {
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.elementor-309
+  .elementor-element.elementor-element-0bc9b65
+  > .elementor-background-overlay {
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+.elementor-bc-flex-widget
+  .elementor-309
+  .elementor-element.elementor-element-1d19c81.elementor-column
+  .elementor-widget-wrap {
+  align-items: center;
+}
+.elementor-309
+  .elementor-element.elementor-element-1d19c81.elementor-column.elementor-element[data-element_type="column"]
+  > .elementor-widget-wrap.elementor-element-populated {
+  align-content: center;
+  align-items: center;
+}
+.elementor-309 .elementor-element.elementor-element-427bfa8 {
+  text-align: center;
+}
+.elementor-309
+  .elementor-element.elementor-element-427bfa8
+  > .elementor-widget-container {
+  margin: 10px 0px 0px 0px;
+}
+@media (max-width: 1024px) {
+  .elementor-bc-flex-widget
+    .elementor-309
+    .elementor-element.elementor-element-1d19c81.elementor-column
+    .elementor-widget-wrap {
+    align-items: center;
+  }
+  .elementor-309
+    .elementor-element.elementor-element-1d19c81.elementor-column.elementor-element[data-element_type="column"]
+    > .elementor-widget-wrap.elementor-element-populated {
+    align-content: center;
+    align-items: center;
+  }
+  .elementor-309 .elementor-element.elementor-element-427bfa8 {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .elementor-309 .elementor-element.elementor-element-1d19c81 {
+    width: 100%;
+  }
+  .elementor-309 .elementor-element.elementor-element-427bfa8 {
+    text-align: center;
+    font-size: 14px;
+  }
+}

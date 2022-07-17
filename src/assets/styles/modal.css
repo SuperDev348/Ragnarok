@@ -1,0 +1,231 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 65vw;
+    height: 45vw;
+    position: relative;
+}
+
+.modal-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 60%;
+}
+
+.del-modal-content {
+    width: 76vw;
+    height: 17vw;
+    position: relative;
+}
+
+.del-modal-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 78%;
+    height: 49%;
+}
+
+.modal-header {
+    position: relative;
+    margin-bottom: 0.5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-footer {
+    padding: 0px;
+}
+
+.modal-title {
+    margin: 0;
+    color: #c77612 !important;
+    font-size: 2.5vw !important;
+}
+
+.modal-body {
+    overflow: auto;
+    color: black;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    height: 40vh;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 15px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background-color: rgb(218, 187, 67);
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    box-shadow: inset 8px 0px 6px rgb(246, 139, 0);
+}
+
+.modal-body::-webkit-scrollbar-button:single-button {
+    background-color: #f3870c00;
+    display: block;
+    border-style: solid;
+    height: 5px;
+    width: 20px;
+}
+
+.modal-body::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0px 8px 18px 8px;
+    border-color: transparent transparent #a1a8a1 transparent;
+}
+
+.modal-body::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #c89e69 transparent;
+}
+
+/* Down */
+.modal-body::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 8px 8px 0 8px;
+    border-color: #a1a8a1 transparent transparent transparent;
+}
+
+.modal-body::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #c89e69 transparent transparent transparent;
+}
+
+.hover-nft {
+    position: absolute;
+    top: 3vw;
+    left: 107%;
+    width: 19vw;
+    height: 18vw;
+    z-index: 1;
+    padding: 1vw;
+    border-radius: 1vw;
+    background: url("../../assets/images/partyHall/hover.png");
+    background-size: 100% 100%;
+}
+
+.nft-info {
+    float: right;
+    text-align: center;
+    margin: 1vw 1.7vw 0vw 0vw;
+}
+
+.info-title {
+    display: block;
+    font-size: 4vw;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    margin-top: 1vw;
+}
+
+.info-content {
+    display: block;
+    font-size: 1.2vw;
+    margin-top: 5.4vw;
+}
+
+.hover-image {
+    float: left;
+    width: 9vw;
+    height: 15vw;
+    margin: 1.3vw;
+}
+
+.current-nft-image {
+    width: 2.5vw;
+    height: 3.5vw;
+    margin-right: 1vw;
+}
+
+.nft-item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    width: 50px;
+    height: 75px;
+}
+
+
+.nft-item:hover {
+    opacity: 0.5;
+}
+
+.nft-image {
+    width: 50px;
+    height: 75px;
+}
+
+.modal-footer button {
+    font-size: 1.5vw;
+    float: right;
+    background-color: #ffc300 !important;
+    padding: 0vw;
+    border-radius: 2vw;
+    margin: 1vw 2vw 1vw 1vw;
+    width: 8vw;
+    height: 3.5vw;
+}
+
+.modal-footer button:hover {
+    font-size: 1.5vw;
+    float: right;
+    background-color: #ffc300 !important;
+    padding: 0vw;
+    border-radius: 2vw;
+    margin: 1vw 2vw 1vw 1vw;
+    width: 8vw;
+    height: 3.5vw;
+}
+
+@media only screen and (min-width: 800px) {
+    .hover-nft {
+        position: absolute;
+        top: 3vw;
+        left: 107%;
+        width: 19vw;
+        height: 18vw;
+        z-index: 1;
+        padding: 1vw;
+        border-radius: 1vw;
+        background: url("../../assets/images/partyHall/hover.png");
+        background-size: 100% 100%;
+    }
+
+    .nft-info {
+        float: right;
+        text-align: center;
+        margin: 1vw 2.2vw 0vw 0vw;
+    }
+
+    .info-content {
+        display: block;
+        font-size: 1.2vw;
+        margin-top: 5.5vw;
+    }
+
+    .hover-image {
+        float: left;
+        width: 9vw;
+        height: 15vw;
+        margin: 1.3vw;
+    }
+}
