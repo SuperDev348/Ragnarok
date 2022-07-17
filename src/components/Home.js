@@ -6,6 +6,7 @@ import { WalletContext } from "../context/wallet";
 import { BUSDABI, STAKING_POOL } from '../abi';
 import { anySeries } from "async";
 import BigNumber from "bignumber.js";
+import ContractUtils from '../utils/contractUtils';
 
 const Home = () => {
     const global = useContext(StoreContext);
@@ -78,15 +79,39 @@ const Home = () => {
         }
     }
 
+    const onClickConnect = async () => {
+        let res = await ContractUtils.connectWallet();
+        if (res.address) {
+            global.setShowToast(true);
+            setWalletAddress(res.address);
+            window.localStorage.setItem('walletLocalStorageKey', res.address);
+        }
+        else {
+            global.setShowToast(true);
+            // setToastType(2)
+            // setToastMessage(res.status)
+            setWalletAddress("");
+        }
+    }
+    const onClickDisconnect = async () => {
+        await ContractUtils.disconnectWallet();
+        await window.localStorage.removeItem('walletLocalStorageKey');
+        setWalletAddress("");
+    }
     return (
         <>
             <div className="mobile-header">
                 <div className="logo">
                     <h1 className="text-center">CTHULHU</h1>
                     <img src="/svgs/index.svg" alt=""/>
-                    <button type="button" className="button connect-wallet-btn">
-                        0xFF7...9d60c
-                    </button>
+                    {walletAddress == '' ?
+                    <>
+                        <button className='connectWallet2' onClick={onClickConnect}>CONNECT WALLET</button>
+                    </>
+                    :
+                    <>
+                        <button className='connectWallet2' onClick={onClickDisconnect}>{walletAddress.substr(0, 6)}...{walletAddress.slice(30)}</button>
+                    </>}
                 </div>
             </div>
             <div className="home">
@@ -155,22 +180,24 @@ const Home = () => {
                 </div>
             </div>
             
-            <img className="position pc vector1" src="/svgs/Vector1.svg" alt=""/>
-            <img className="position pc vector2" src="/svgs/Vector1.svg" alt=""/>
-            <img className="position pc vector3" src="/svgs/Vector3.svg" alt=""/>
-            <img className="position pc back1" src="/svgs/back1.svg" alt=""/>
-            <img className="position pc back2" src="/svgs/back2.svg" alt=""/>
-            <img className="position pc back3" src="/svgs/back3.svg" alt=""/>
-            <img className="position pc back4" src="/svgs/back2.svg" alt=""/>
-            <img className="position pc back5" src="/svgs/back5.svg" alt=""/>
-            <img className="position pc back6" src="/svgs/back6.svg" alt=""/>
-            <img className="position pc back7" src="/svgs/back7.svg" alt=""/>
-            <img className="position mobile vector8" src="/svgs/vector8.svg" alt=""/>
-            <img className="position mobile vector9" src="/svgs/vector9.svg" alt=""/>
-            <img className="position mobile back8" src="/svgs/back8.svg" style={{ visibility: "visible" }} alt=""/>
-            <img className="position mobile back9" src="/svgs/back9.svg" style={{ visibility: "visible" }} alt=""/>
-            <img className="position mobile back10" src="/svgs/back10.svg" style={{ visibility: "visible" }} alt=""/>
-            <img className="position mobile back11" src="/svgs/back11.svg" style={{ visibility: "visible" }} alt=""/>
+            <img className="position pc vector1" src="/svgs/Vector1.svg" alt="f"/>
+            <img className="position pc vector2" src="/svgs/Vector1.svg" />
+            <img className="position pc vector3" src="/svgs/Vector3.svg" />
+            <img className="position pc back1" src="/svgs/back1.svg" />
+            <img className="position pc back2" src="/svgs/back2.svg" />
+            <img className="position pc back3" src="/svgs/back3.svg" />
+            <img className="position pc back4" src="/svgs/back2.svg" />
+            <img className="position pc back5" src="/svgs/back5.svg" />
+            <img className="position pc back6" src="/svgs/back6.svg" />
+            <img className="position pc back7" src="/svgs/back7.svg" />
+            <img className="position mobile vector8" src="/svgs/vector8.svg" />
+            <img className="position mobile vector9" src="/svgs/vector9.svg" />
+            <img className="position mobile back8" src="/svgs/back8.svg" style={{ visibility: "visible" }} />
+            <img className="position mobile back9" src="/svgs/back9.svg" style={{ visibility: "visible" }} />
+            <img className="position mobile back10" src="/svgs/back10.svg" style={{ visibility: "visible" }} />
+            <img className="position mobile back11" src="/svgs/back11.svg" style={{ visibility: "visible" }} />
+
+           
         </>
     )
 }

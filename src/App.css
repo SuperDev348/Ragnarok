@@ -85,6 +85,16 @@ input[type=number] {
     font-size: 12px;
     text-transform: uppercase;
 }
+.connectWallet2 {
+    background: #53c351;
+    border: 1px solid #53c351;
+    border-radius: 18px;
+    color: #fff;
+    width: 188.22px;
+    padding: 0px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
 
 .connectWallet:hover {
     background-color: #283825;
@@ -558,6 +568,10 @@ input {
     padding: 0;
     transition: .3s;
 }
+.footer-button {
+    width: 25px;
+    height: 10px;
+}
 
 .mobile-menu {
     bottom: 0;
@@ -581,8 +595,8 @@ input {
         flex-direction: row;
         gap: 35px;
         justify-content: center;
-        padding-bottom: 20px;
-        padding-top: 20px;
+        padding-bottom: 40px;
+        padding-top:5px;
     }
 }
 

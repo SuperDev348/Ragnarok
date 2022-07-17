@@ -13,13 +13,13 @@ function Footer () {
             <div className="mobile-menu">
                 <div className="body mobile-contact">
                     <Link to="/">
-                        <button className="action button">
+                        <button className="action button footer-button">
                             <img src="/svgs/home.svg" />
                             <p>Home</p>
                         </button>
                     </Link>
                     <Link to="/about">
-                        <button className="button action">
+                        <button className="button action footer-button">
                             <img src="/svgs/about.svg" />
                             <p>About</p>
                         </button>
